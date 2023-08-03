@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
+          git config --global init.defaultBranch master
           git init
           git version
           git clone "${{ github.event.repository.html_url }}" /home/runner/work/go-cqhttp/go-cqhttp
